@@ -1,0 +1,60 @@
+[begin] (b l a c k b o x )
+	[exec] (Eterm) {Eterm -x -0 --trans --scrollbar=off --buttonbar 0 --geometry 79x35+13+495 --font-fx none -f lightgrey}
+	[nop] ()
+	[submenu] (terminals) {terminals}
+		[exec] (aterm) {aterm -tr -bg black -fg lightgrey -fn 7x14 -fb 7x14 +vb +sb -geometry 79x32+13+495}
+		[exec] (gterm) {gnome-terminal}
+		[exec] (kterm) {konsole}
+		[exec] (xterm) {xterm -ls}
+	[end]
+	[submenu] (gnome) {gnome}
+		[exec] (nautilus) {nautilus --no-desktop}
+		[exec] (gnome-theme-manager) {gnome-theme-manager}
+		[exec] (gnome-settings-daemon) {gnome-settings-daemon}
+		
+	[end]
+	[submenu] (audio) {}
+		[exec] (xmms) {xmms}
+		[exec] (gnome-volume) {gnome-volume-manager}
+	[end]
+	[submenu] (internet) {}
+		[exec] (firefox) {firefox}
+		[exec] (gaim) {gaim}
+		[exec] (gftp) {gftp}
+		[exec] (bluefish) {bluefish}
+		[exec] (firestarter) {gksudo /usr/sbin/firestarter}
+		[exec] (virus scanner) {aegis-virus-scanner}
+	[end]
+	[submenu] (graphics) {}
+		[exec] (the gimp) {gimp}
+	[end]
+	[submenu] (office apps) {}
+		[exec] (oo.o writer) {ooffice2}
+	[end]
+	[submenu] (video) {}
+		[exec] (gmplayer) {gmplayer}
+		[exec] (vlc) {vlc}
+		[exec] (xine) {xine}
+	[end]
+	[submenu] (system monitor) {}
+		[exec] (monitor start) {conky}
+		[exec] (monitor stop) {killall conky}
+	[end]
+	[nop] ()
+	[workspaces] (workspace list)
+	[config] (configuration)
+	[nop] ()
+	[submenu] (startup) {}
+		[exec] (gnome-settings-daemon ) {gnome-settings-daemon &}
+		[exec] (conky) {conky &}
+		[exec] (Esetroot) {Esetroot .blackbox/backgrounds/Complex_2.jpg}
+		[exec] (wmbutton) {wmbutton &}
+		[exec] (wmweather) {wmweather -w -s KROC &}
+		[exec] (wmcpuload ) {wmcpuload &}
+		[exec] (wmclock) {wmclock -12 -led white &}
+	[end]
+	[nop] ()
+	[reconfig] (reconfigure)
+	[restart] (restart) {}
+	[exit] (exit)
+[end]
